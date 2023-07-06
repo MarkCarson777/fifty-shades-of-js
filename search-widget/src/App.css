@@ -25,7 +25,7 @@ body {
   width: 50px;
   border-radius: 0.25rem;
   border: none;
-  background-color: rgba(190, 197, 205, 1);
+  background-color: rgba(155, 160, 165, 1);
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -40,11 +40,14 @@ body {
   transition: width 0.3s ease;
 }
 
+.input::placeholder {
+  color: rgba(155, 160, 165, 1);
+}
+
 .btn img {
   padding: 0.4rem;
   height: 100%;
   width: 100%;
-  fill: red;
 }
 
 .input:focus {
