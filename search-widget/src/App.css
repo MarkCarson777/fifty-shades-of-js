@@ -3,19 +3,17 @@
 }
 
 body {
-  background-color: aquamarine;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
   height: 100vh;
   overflow: hidden;
-  margin: 0;
+  background-color: rgba(94, 254, 214, 1);
 }
 
 .search {
   position: relative;
-  display: flex;
-  align-items: center;
   height: 50px;
 }
 
@@ -23,12 +21,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
-  align-items: center;
   height: 100%;
   width: 50px;
+  border-radius: 0.25rem;
   border: none;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(190, 197, 205, 1);
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -36,16 +33,18 @@ body {
 .search .input {
   height: 100%;
   width: 50px;
-  border: none;
-  font-size: 1rem;
   padding: 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  font-size: 1.25rem;
   transition: width 0.3s ease;
 }
 
 .btn img {
-  padding: 0.5rem;
+  padding: 0.4rem;
   height: 100%;
   width: 100%;
+  fill: red;
 }
 
 .input:focus {
@@ -58,4 +57,8 @@ body {
 
 .search.active .btn {
   transform: translateX(198px);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
