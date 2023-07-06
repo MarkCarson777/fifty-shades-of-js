@@ -1,7 +1,7 @@
-import { Cell } from "./components/Cell";
+import { Board } from "./components/Board";
 
 import "./App.css";
 
 export function App() {
-  return <Cell type={1} />;
+  return <Board />;
 }
