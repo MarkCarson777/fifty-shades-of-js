@@ -1,4 +1,4 @@
-import { Cell } from "./components/Cell";
+import { Cell } from "../Cell";
 
 export function Board(props) {
   const { board } = props;
