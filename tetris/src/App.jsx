@@ -1,7 +1,7 @@
-import { Display } from "./components/Display";
+import { Cell } from "./components/Cell";
 
 import "./App.css";
 
 export function App() {
-  return <>Tetris</>;
+  return <Cell type={1} />;
 }
