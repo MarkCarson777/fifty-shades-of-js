@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgba(22, 23, 26, 1);
+}
+
+.container {
+  position: absolute;
+  top: 35%;
+  left: 45%;
+}
+
+.sun {
+  position: absolute;
+  top: 122px;
+  left: 122px;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 100%;
+  background-color: rgba(242, 218, 130, 1);
+  box-shadow: 0 0 20px 10px rgba(206, 128, 55, 1);
+  animation: pulsate 2s infinite;
+}
+
+.innerOrbit {
+  position: absolute;
+  top: 75px;
+  left: 75px;
+  width: 150px;
+  height: 150px;
+  border: 2px rgba(253, 253, 253, 0.4) solid;
+  border-radius: 100%;
+  -webkit-animation: spin-right 7s linear infinite;
+  animation: spin-right 7s linear infinite;
+}
+
+.innerPlanet {
+  position: absolute;
+  top: 62px;
+  left: -12px;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+  background-color: rgba(241, 131, 64, 1);
+  box-shadow: 0 0 10px 0 rgba(241, 131, 64, 1);
+}
+
+.middleOrbit {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  width: 225px;
+  height: 225px;
+  border: 2px rgba(253, 253, 253, 0.4) solid;
+  border-radius: 100%;
+  -webkit-animation: spin-right 6s linear infinite;
+  animation: spin-right 6s linear infinite;
+}
+
+.middlePlanet {
+  position: absolute;
+  top: 25px;
+  left: 17px;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background-color: rgba(255, 101, 75, 1);
+  box-shadow: 0 0 10px 0 rgba(255, 101, 75, 1);
+}
+
+.outerOrbit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 294px;
+  height: 294px;
+  border: 2px rgba(253, 253, 253, 0.4) solid;
+  border-radius: 100%;
+  -webkit-animation: spin-right 6s linear infinite;
+  animation: spin-right 6s linear infinite;
+}
+.outerPlanet {
+  position: absolute;
+  top: -17px;
+  left: 100px;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 100%;
+  background-color: rgba(0, 189, 221, 1);
+  box-shadow: 0 0 10px 0 rgba(0, 189, 221, 1);
+}
+
+@keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    box-shadow: 0 0 20px 10px rgba(241, 131, 64, 1);
+  }
+  50% {
+    box-shadow: 0 0 40px 20px rgba(241, 131, 64, 1);
+  }
+  100% {
+    box-shadow: 0 0 20px 10px rgba(241, 131, 64, 1);
+  }
+}
