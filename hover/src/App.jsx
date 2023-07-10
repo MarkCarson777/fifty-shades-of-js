@@ -14,11 +14,11 @@ const images = [
 
 export function App() {
   return (
-    <div>
+    <div className="grid">
       {images.map(({ id, src, alt, label }) => (
-        <div key={id}>
+        <div key={id} className="img-container">
           <img src={src} alt={alt} />
-          <div>{label}</div>
+          <div className="label">{label}</div>
         </div>
       ))}
     </div>
