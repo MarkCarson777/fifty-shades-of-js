@@ -64,12 +64,34 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
   border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.down-button img,
+.up-button img {
+  height: 48px;
+  width: 48px;
+  opacity: 0.8;
 }
 
 .up-button {
   margin-bottom: 4px;
+}
+
+.pulse {
+  animation: pulse 1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
