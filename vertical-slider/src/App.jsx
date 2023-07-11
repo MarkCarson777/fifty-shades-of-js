@@ -21,6 +21,10 @@ export function App() {
           <div key={id} style={{ backgroundImage: `url(${image})` }} />
         ))}
       </div>
+      <div class="buttons">
+        <button>Down</button>
+        <button>Up</button>
+      </div>
     </div>
   );
 }
