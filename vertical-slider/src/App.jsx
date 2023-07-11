@@ -1,15 +1,15 @@
 import "./App.css";
 
-import jungleOne from "./images/jungle-one.jpg";
-import jungleTwo from "./images/jungle-two.jpg";
-import jungleThree from "./images/jungle-three.jpg";
-import jungleFour from "./images/jungle-four.jpg";
+import waterfallOne from "./images/waterfall-one.jpg";
+import waterfallTwo from "./images/waterfall-two.jpg";
+import waterfallThree from "./images/waterfall-three.jpg";
+import waterfallFour from "./images/waterfall-four.jpg";
 
 const images = [
-  { id: 1, image: jungleOne },
-  { id: 2, image: jungleTwo },
-  { id: 3, image: jungleThree },
-  { id: 4, image: jungleFour },
+  { id: 1, image: waterfallOne },
+  { id: 2, image: waterfallTwo },
+  { id: 3, image: waterfallThree },
+  { id: 4, image: waterfallFour },
 ];
 
 export function App() {
