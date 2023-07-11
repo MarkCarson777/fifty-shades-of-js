@@ -21,6 +21,7 @@ body {
   left: 0;
   height: 100%;
   width: 50%;
+  background-color: rgba(41, 42, 45, 1);
 }
 
 .left-slide > div {
@@ -35,7 +36,6 @@ body {
 
 .left-slide span {
   font-size: 3rem;
-  color: rgba(0, 0, 0, 1);
 }
 
 .right-slide {
@@ -56,4 +56,19 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.down-button,
+.up-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  border: none;
+}
+
+.up-button {
+  margin-bottom: 8px;
 }

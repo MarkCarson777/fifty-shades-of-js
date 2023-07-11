@@ -1,5 +1,8 @@
 import "./App.css";
 
+import up from "./icons/circle-chevron-up.svg";
+import down from "./icons/circle-chevron-down.svg";
+
 import waterfallOne from "./images/waterfall-one.jpg";
 import waterfallTwo from "./images/waterfall-two.jpg";
 import waterfallThree from "./images/waterfall-three.jpg";
@@ -16,7 +19,9 @@ export function App() {
   return (
     <div className="container">
       <div className="left-slide">
-        <div>
+        <div
+          style={{ backgroundColor: "rgba(247, 115, 39, 1.0)", color: "white" }}
+        >
           <span>Waterfall One</span>
         </div>
         <div>
@@ -34,9 +39,13 @@ export function App() {
           <div key={id} style={{ backgroundImage: `url(${image})` }} />
         ))}
       </div>
-      <div class="buttons">
-        <button>Down</button>
-        <button>Up</button>
+      <div className="buttons">
+        <button className="up-button">
+          <img src={up} />
+        </button>
+        <button className="down-button">
+          <img src={down} />
+        </button>
       </div>
     </div>
   );
