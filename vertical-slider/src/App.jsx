@@ -15,7 +15,20 @@ const images = [
 export function App() {
   return (
     <div className="container">
-      <div className="left-slide"></div>
+      <div className="left-slide">
+        <div>
+          <span>Waterfall One</span>
+        </div>
+        <div>
+          <span>Waterfall Two</span>
+        </div>
+        <div>
+          <span>Waterfall Three</span>
+        </div>
+        <div>
+          <span>Waterfall Four</span>
+        </div>
+      </div>
       <div className="right-slide">
         {images.map(({ id, image }) => (
           <div key={id} style={{ backgroundImage: `url(${image})` }} />
