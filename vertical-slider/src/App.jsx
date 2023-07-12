@@ -11,19 +11,52 @@ import waterfallThree from "./images/waterfall-three.jpg";
 import waterfallFour from "./images/waterfall-four.jpg";
 
 const images = [
-  { id: 1, image: waterfallOne },
-  { id: 2, image: waterfallTwo },
-  { id: 3, image: waterfallThree },
-  { id: 4, image: waterfallFour },
+  {
+    id: 1,
+    image: waterfallOne,
+    color: "rgba(60, 108, 80, 1.0)",
+    label: "Waterfall One",
+  },
+  {
+    id: 2,
+    image: waterfallTwo,
+    color: "rgba(130, 133, 174, 1.0)",
+    label: "Waterfall Two",
+  },
+  {
+    id: 3,
+    image: waterfallThree,
+    color: "rgba(76, 124, 159, 1.0)",
+    label: "Waterfall Three",
+  },
+  {
+    id: 4,
+    image: waterfallFour,
+    color: "rgba(234, 140, 84, 1.0)",
+    label: "Waterfall Four",
+  },
 ];
 
 export function App() {
   const [activeSlideIndex, setActiveSlideIndex] = useState(-1);
   const [sliderHeight, setSliderHeight] = useState(0);
+  const [activeButton, setActiveButton] = useState(null);
+  const [pulse, setPulse] = useState(false);
 
   const sliderContainerRef = useRef(null);
   const slideLeftRef = useRef(null);
   const slideRightRef = useRef(null);
+
+  const onClick = (id, direction) => {
+    setActiveButton(id);
+    setPulse(true);
+    changeSlide(direction);
+
+    setTimeout(() => {
+      setActiveButton(null);
+      setPulse(false);
+    }, 500);
+  };
 
   useEffect(() => {
     const slidesLength = slideRightRef.current.querySelectorAll("div").length;
@@ -34,11 +67,13 @@ export function App() {
   const changeSlide = (direction) => {
     const sliderHeight = sliderContainerRef.current.clientHeight;
 
-    if (direction === "up") {
-      setActiveSlideIndex((prevIndex) => prevIndex + 1);
-    } else if (direction === "down") {
-      setActiveSlideIndex((prevIndex) => prevIndex - 1);
-    }
+    setActiveSlideIndex((prevIndex) => {
+      if (direction === "up") {
+        return prevIndex + 1;
+      } else if (direction === "down") {
+        return prevIndex - 1;
+      }
+    });
   };
 
   useEffect(() => {
@@ -61,42 +96,18 @@ export function App() {
   return (
     <div className="container" ref={sliderContainerRef}>
       <div className="left-slide" ref={slideLeftRef}>
-        <div
-          id={1}
-          style={{
-            backgroundColor: "rgba(60, 108, 80, 1.00)",
-            color: "white",
-          }}
-        >
-          <span>Waterfall One</span>
-        </div>
-        <div
-          id={2}
-          style={{
-            backgroundColor: "rgba(196, 199, 199, 1.00)",
-            color: "white",
-          }}
-        >
-          <span>Waterfall Two</span>
-        </div>
-        <div
-          id={3}
-          style={{
-            backgroundColor: "rgba(76, 124, 159, 1.00)",
-            color: "white",
-          }}
-        >
-          <span>Waterfall Three</span>
-        </div>
-        <div
-          id={4}
-          style={{
-            backgroundColor: "rgba(234, 140, 84, 1.00)",
-            color: "white",
-          }}
-        >
-          <span>Waterfall Four</span>
-        </div>
+        {images.map(({ id, color, label }) => (
+          <div
+            key={id}
+            id={id}
+            style={{
+              backgroundColor: color,
+              color: "white",
+            }}
+          >
+            <span>{label}</span>
+          </div>
+        ))}
       </div>
       <div className="right-slide" ref={slideRightRef}>
         {images.map(({ id, image }) => (
@@ -104,11 +115,19 @@ export function App() {
         ))}
       </div>
       <div className="buttons">
-        <button className="up-button" onClick={() => changeSlide("up")}>
-          <img src={up} />
+        <button
+          className={`up-button ${pulse && activeButton === 1 ? "pulse" : ""}`}
+          onClick={() => onClick(1, "up")}
+        >
+          <img src={up} alt="up" />
         </button>
-        <button className="down-button" onClick={() => changeSlide("down")}>
-          <img src={down} />
+        <button
+          className={`down-button ${
+            pulse && activeButton === 2 ? "pulse" : ""
+          }`}
+          onClick={() => onClick(2, "down")}
+        >
+          <img src={down} alt="down" />
         </button>
       </div>
     </div>

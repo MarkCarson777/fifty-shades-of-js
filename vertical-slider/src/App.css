@@ -25,7 +25,7 @@ body {
   top: 0;
   left: 0;
   height: 100%;
-  width: 50%;
+  width: 40%;
 }
 
 .left-slide > div {
@@ -42,9 +42,9 @@ body {
 
 .right-slide {
   position: absolute;
-  left: 50%;
+  left: 40%;
   height: 100%;
-  width: 50%;
+  width: 60%;
 }
 
 .right-slide > div {
@@ -55,7 +55,7 @@ body {
 .buttons {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
 }
 
@@ -73,15 +73,14 @@ body {
 .up-button img {
   height: 48px;
   width: 48px;
-  opacity: 0.8;
 }
 
 .up-button {
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .pulse {
-  animation: pulse 1s;
+  animation: pulse 0.5s;
 }
 
 @keyframes pulse {
