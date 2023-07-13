@@ -5,9 +5,9 @@ import nature from "./images/nature.jpg";
 import "./App.css";
 
 export function App() {
-  const [image, setImage] = useState("");
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+  const [image, setImage] = useState(null);
+  const [title, setTitle] = useState(null);
+  const [description, setDescription] = useState(null);
 
   useEffect(() => {
     setTimeout(getData, 2500);
@@ -21,10 +21,22 @@ export function App() {
 
   return (
     <div className="card">
-      <img className="card-img" src={image} alt={image} />
+      {image ? (
+        <img className="card-img" src={image} alt={image} />
+      ) : (
+        <div className="bg-animation img-placeholder"></div>
+      )}
       <div className="card-content">
-        <h3 className="card-title">{title}</h3>
-        <p className="card-desc">{description}</p>
+        {title ? (
+          <h3 className="card-title">{title}</h3>
+        ) : (
+          <div className="bg-animation text-placeholder"></div>
+        )}
+        {description ? (
+          <p className="card-desc">{description}</p>
+        ) : (
+          <div className="bg-animation text-placeholder"></div>
+        )}
       </div>
     </div>
   );
