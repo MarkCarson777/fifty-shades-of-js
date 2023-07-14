@@ -10,16 +10,24 @@ import snowSeven from "./images/snow-seven.jpg";
 import snowEight from "./images/snow-eight.jpg";
 
 const images = [
-  { id: 1, src: snowOne, alt: "Snow image" },
-  { id: 2, src: snowTwo, alt: "Snow image" },
-  { id: 3, src: snowThree, alt: "Snow image" },
-  { id: 4, src: snowFour, alt: "Snow image" },
-  { id: 5, src: snowFive, alt: "Snow image" },
-  { id: 6, src: snowSix, alt: "Snow image" },
-  { id: 7, src: snowSeven, alt: "Snow image" },
-  { id: 8, src: snowEight, alt: "Snow image" },
+  { id: 1, image: snowOne, alt: "Image One" },
+  { id: 2, image: snowTwo, alt: "Image Two" },
+  { id: 3, image: snowThree, alt: "Image Three" },
+  { id: 4, image: snowFour, alt: "Image Four" },
+  { id: 5, image: snowFive, alt: "Image Five" },
+  { id: 6, image: snowSix, alt: "Image Six" },
+  { id: 7, image: snowSeven, alt: "Image Seven" },
+  { id: 8, image: snowEight, alt: "Image Eight" },
 ];
 
 export function App() {
-  return <>Rotating Gallery</>;
+  return (
+    <div className="container">
+      {images.map(({ id, image, alt }) => (
+        <span key={id}>
+          <img src={image} alt={alt} />
+        </span>
+      ))}
+    </div>
+  );
 }
