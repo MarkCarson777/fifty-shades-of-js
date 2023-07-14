@@ -32,11 +32,7 @@ export function App() {
   const onClick = (id) => {
     setActiveBtn(id);
 
-    if (id === 1) {
-      onPrev();
-    } else {
-      onNext();
-    }
+    id === 1 ? onPrev() : onNext();
 
     setTimeout(() => {
       setActiveBtn(null);
