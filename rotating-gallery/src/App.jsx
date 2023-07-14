@@ -27,6 +27,21 @@ const images = [
 
 export function App() {
   const [rotateY, setRotateY] = useState(45);
+  const [activeBtn, setActiveBtn] = useState(null);
+
+  const onClick = (id) => {
+    setActiveBtn(id);
+
+    if (id === 1) {
+      onPrev();
+    } else {
+      onNext();
+    }
+
+    setTimeout(() => {
+      setActiveBtn(null);
+    }, 500);
+  };
 
   function onPrev() {
     console.log("Previous");
@@ -51,10 +66,16 @@ export function App() {
         ))}
       </div>
       <div className="btn-container">
-        <button className="btn" onClick={() => onPrev()}>
+        <button
+          className={`btn ${activeBtn === 1 ? "pulse" : ""}`}
+          onClick={() => onClick(1)}
+        >
           <img src={left} alt="Left" />
         </button>
-        <button className="btn" onClick={() => onNext()}>
+        <button
+          className={`btn ${activeBtn === 2 ? "pulse" : ""}`}
+          onClick={() => onClick(2)}
+        >
           <img src={right} alt="Right" />
         </button>
       </div>
