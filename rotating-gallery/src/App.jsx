@@ -21,6 +21,14 @@ const images = [
 ];
 
 export function App() {
+  function onPrev() {
+    console.log("Previous");
+  }
+
+  function onNext() {
+    console.log("Next");
+  }
+
   return (
     <>
       <div className="img-container">
@@ -31,8 +39,8 @@ export function App() {
         ))}
       </div>
       <div className="btn-container">
-        <button>Previous</button>
-        <button>Next</button>
+        <button onClick={() => onPrev()}>Previous</button>
+        <button onClick={() => onNext()}>Next</button>
       </div>
     </>
   );
