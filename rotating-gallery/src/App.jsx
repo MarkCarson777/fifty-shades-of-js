@@ -29,10 +29,10 @@ export function App() {
   const [rotateY, setRotateY] = useState(45);
   const [activeBtn, setActiveBtn] = useState(null);
 
-  const onClick = (id) => {
-    setActiveBtn(id);
+  const onClick = (button) => {
+    setActiveBtn(button);
 
-    id === 1 ? onPrev() : onNext();
+    button === "prev" ? onPrev() : onNext();
 
     setTimeout(() => {
       setActiveBtn(null);
@@ -66,14 +66,14 @@ export function App() {
       </div>
       <div className="btn-container">
         <button
-          className={`btn ${activeBtn === 1 ? "pulse" : ""}`}
-          onClick={() => onClick(1)}
+          className={`btn ${activeBtn === "prev" && "pulse"}`}
+          onClick={() => onClick("prev")}
         >
           <img src={left} alt="Left" />
         </button>
         <button
-          className={`btn ${activeBtn === 2 ? "pulse" : ""}`}
-          onClick={() => onClick(2)}
+          className={`btn ${activeBtn === "next" && "pulse"}`}
+          onClick={() => onClick("next")}
         >
           <img src={right} alt="Right" />
         </button>
