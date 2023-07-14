@@ -61,7 +61,7 @@ body {
 }
 
 .pulse {
-  animation: pulse 0.4s;
+  animation: pulse 0.3s;
 }
 
 @keyframes pulse {

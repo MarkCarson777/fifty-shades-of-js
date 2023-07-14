@@ -40,16 +40,19 @@ export function App() {
   };
 
   function onPrev() {
-    console.log("Previous");
+    setRotateY((prevY) => prevY + 45);
   }
 
   function onNext() {
-    console.log("Next");
+    setRotateY((prevY) => prevY - 45);
   }
 
   return (
     <>
-      <div className="img-container">
+      <div
+        className="img-container"
+        style={{ transform: `perspective(1000px) rotateY(${rotateY}deg)` }}
+      >
         {images.map(({ id, image, alt }) => (
           <span
             key={id}
