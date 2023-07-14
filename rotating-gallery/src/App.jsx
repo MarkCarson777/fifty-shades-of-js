@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import "./App.css";
 
 import snowOne from "./images/snow-one.jpg";
@@ -21,6 +23,8 @@ const images = [
 ];
 
 export function App() {
+  const [rotateY, setRotateY] = useState(0);
+
   function onPrev() {
     console.log("Previous");
   }
