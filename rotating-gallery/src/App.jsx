@@ -22,12 +22,18 @@ const images = [
 
 export function App() {
   return (
-    <div className="container">
-      {images.map(({ id, image, alt }) => (
-        <span key={id}>
-          <img src={image} alt={alt} />
-        </span>
-      ))}
-    </div>
+    <>
+      <div className="img-container">
+        {images.map(({ id, image, alt }) => (
+          <span key={id}>
+            <img src={image} alt={alt} />
+          </span>
+        ))}
+      </div>
+      <div className="btn-container">
+        <button>Previous</button>
+        <button>Next</button>
+      </div>
+    </>
   );
 }

@@ -14,22 +14,24 @@ body {
   text-align: center;
 }
 
-.container {
+.img-container {
   position: relative;
   height: 200px;
   width: 200px;
 }
 
-.container span {
+.img-container span {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
   width: 100%;
 }
 
-.container span img {
+.img-container span img {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
   width: 100%;
 }
