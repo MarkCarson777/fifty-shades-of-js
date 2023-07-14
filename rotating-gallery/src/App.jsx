@@ -23,7 +23,7 @@ const images = [
 ];
 
 export function App() {
-  const [rotateY, setRotateY] = useState(0);
+  const [rotateY, setRotateY] = useState(45);
 
   function onPrev() {
     console.log("Previous");
@@ -37,7 +37,12 @@ export function App() {
     <>
       <div className="img-container">
         {images.map(({ id, image, alt }) => (
-          <span key={id}>
+          <span
+            key={id}
+            style={{
+              transform: `rotateY(calc(${id} * 45deg)) translateZ(400px)`,
+            }}
+          >
             <img src={image} alt={alt} />
           </span>
         ))}
