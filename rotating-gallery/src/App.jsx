@@ -2,6 +2,9 @@ import { useState } from "react";
 
 import "./App.css";
 
+import left from "./icons/angles-left.svg";
+import right from "./icons/angles-right.svg";
+
 import snowOne from "./images/snow-one.jpg";
 import snowTwo from "./images/snow-two.jpg";
 import snowThree from "./images/snow-three.jpg";
@@ -48,8 +51,12 @@ export function App() {
         ))}
       </div>
       <div className="btn-container">
-        <button onClick={() => onPrev()}>Previous</button>
-        <button onClick={() => onNext()}>Next</button>
+        <button className="btn" onClick={() => onPrev()}>
+          <img src={left} alt="Left" />
+        </button>
+        <button className="btn" onClick={() => onNext()}>
+          <img src={right} alt="Right" />
+        </button>
       </div>
     </>
   );
