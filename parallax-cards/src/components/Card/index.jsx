@@ -5,7 +5,7 @@ export function Card({ image, title }) {
   const [width, setWidth] = useState(0);
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
-  const [mouseLeaveDelay, setMouseLeaveDelay] = useState(null);
+  const [mouseOutDelay, setMouseOutDelay] = useState(null);
 
   const cardRef = useRef(null);
 
@@ -19,40 +19,42 @@ export function Card({ image, title }) {
     setMouseY(event.pageY - cardRef.current.offsetTop - height / 2);
   };
 
-  const onMouseEnter = () => {
-    clearTimeout(mouseLeaveDelay);
+  const onMouseIn = () => {
+    clearTimeout(mouseOutDelay);
   };
 
-  const onMouseLeave = () => {
+  const onMouseOut = () => {
     const delay = setTimeout(() => {
       setMouseX(0);
       setMouseY(0);
     }, 1000);
-    setMouseLeaveDelay(delay);
+    setMouseOutDelay(delay);
   };
 
-  const mousePX = mouseX / width;
-  const mousePY = mouseY / height;
+  const mouseXPosition = mouseX / width;
+  const mouseYPosition = mouseY / height;
 
   return (
     <div
       className="container"
       onMouseMove={onMouseMove}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+      onMouseIn={onMouseIn}
+      onMouseOut={onMouseOut}
       ref={cardRef}
     >
       <div
         className="card"
         style={{
-          transform: `rotateY(${mousePX * 30}deg) rotateX(${mousePY * -30}deg)`,
+          transform: `rotateY(${mouseXPosition * 30}deg) rotateX(${
+            mouseYPosition * -30
+          }deg)`,
         }}
       >
         <div
           className="img"
           style={{
-            transform: `translateX(${mousePX * -40}px) translateY(${
-              mousePY * -40
+            transform: `translateX(${mouseXPosition * -40}px) translateY(${
+              mouseYPosition * -40
             }px)`,
             backgroundImage: `url(${image})`,
           }}

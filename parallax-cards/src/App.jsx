@@ -8,10 +8,10 @@ import parallaxThree from "./images/parallaxThree.jpg";
 import parallaxFour from "./images/parallaxFour.jpg";
 
 const images = [
-  { img: parallaxOne, title: "Image", desc: "Description" },
-  { img: parallaxTwo, title: "Image", desc: "Description" },
-  { img: parallaxThree, title: "Image", desc: "Description" },
-  { img: parallaxFour, title: "Image", desc: "Description" },
+  { img: parallaxOne, title: "Alps" },
+  { img: parallaxTwo, title: "Dolomites" },
+  { img: parallaxThree, title: "Pyrenees" },
+  { img: parallaxFour, title: "Atlas" },
 ];
 
 export function App() {
