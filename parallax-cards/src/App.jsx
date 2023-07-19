@@ -2,23 +2,23 @@ import { Card } from "./components/Card";
 
 import "./App.css";
 
-import tunnelOne from "./images/tunnelOne.jpg";
-import tunnelTwo from "./images/tunnelTwo.jpg";
-import tunnelThree from "./images/tunnelThree.jpg";
-import tunnelFour from "./images/tunnelFour.jpg";
+import parallaxOne from "./images/parallaxOne.jpg";
+import parallaxTwo from "./images/parallaxTwo.jpg";
+import parallaxThree from "./images/parallaxThree.jpg";
+import parallaxFour from "./images/parallaxFour.jpg";
 
 const images = [
-  { img: tunnelOne, title: "Image", desc: "Description" },
-  { img: tunnelTwo, title: "Image", desc: "Description" },
-  { img: tunnelThree, title: "Image", desc: "Description" },
-  { img: tunnelFour, title: "Image", desc: "Description" },
+  { img: parallaxOne, title: "Image", desc: "Description" },
+  { img: parallaxTwo, title: "Image", desc: "Description" },
+  { img: parallaxThree, title: "Image", desc: "Description" },
+  { img: parallaxFour, title: "Image", desc: "Description" },
 ];
 
 export function App() {
   return (
-    <div className="container">
-      {images.map(({ img, title, desc }) => (
-        <Card image={img} title={title} desc={desc} />
+    <div className="page-container">
+      {images.map(({ img, title }) => (
+        <Card image={img} title={title} />
       ))}
     </div>
   );
