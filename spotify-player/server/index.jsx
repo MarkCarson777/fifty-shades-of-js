@@ -1,14 +1,15 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const request = require("request");
 
 const app = express();
-const PORT = 8000;
+const PORT = 8888;
 
 dotenv.config();
 
-// var spotify_client_id = process.env.SPOTIFY_CLIENT_ID
-// var spotify_client_secret = process.env.SPOTIFY_CLIENT_SECRET
 const spotify_client_id = process.env.SPOTIFY_CLIENT_ID;
+const spotify_client_secret = process.env.SPOTIFY_CLIENT_SECRET;
+const REDIRECT_URI = process.env.REDIRECT_URI;
 
 function generateRandomString(length) {
   const characters =
@@ -22,19 +23,28 @@ function generateRandomString(length) {
   return text;
 }
 
-app.get("/auth/login", (req, res) => {
-  var scope =
+app.get("/", (req, res) => {
+  const data = {
+    name: "Mark",
+    isAwesome: true,
+  };
+
+  res.json(data);
+});
+
+app.get("/login", (req, res) => {
+  const scope =
     "streaming \
                user-read-email \
                user-read-private";
 
-  var state = generateRandomString(16);
+  const state = generateRandomString(16);
 
   var auth_query_parameters = new URLSearchParams({
     response_type: "code",
     client_id: spotify_client_id,
     scope: scope,
-    redirect_uri: "http://localhost:5173/auth/callback",
+    redirect_uri: REDIRECT_URI,
     state: state,
   });
 
@@ -44,7 +54,44 @@ app.get("/auth/login", (req, res) => {
   );
 });
 
-app.get("/auth/callback", (req, res) => {});
+app.get("/callback", (req, res) => {
+  const code = req.query.code;
+
+  const authOptions = {
+    url: "https://accounts.spotify.com/api/token",
+    form: {
+      code: code,
+      redirect_uri: REDIRECT_URI,
+      grant_type: "authorization_code",
+    },
+    headers: {
+      Authorization:
+        "Basic " +
+        Buffer.from(spotify_client_id + ":" + spotify_client_secret).toString(
+          "base64"
+        ),
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    json: true,
+  };
+
+  request.post(authOptions, function (error, response, body) {
+    if (!error && response.statusCode === 200) {
+      var access_token = body.access_token;
+      res.redirect("/");
+    } else {
+      console.error("Error while requesting access token:", error);
+      console.error("Response status code:", response.statusCode);
+      console.error("Response body:", body);
+    }
+  });
+});
+
+app.get("/token", (req, res) => {
+  res.json({
+    access_token: access_token,
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`Listening at http://localhost:${PORT}`);
