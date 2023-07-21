@@ -9,8 +9,6 @@ import "./App.css";
 export function App() {
   const [term, setTerm] = useState("");
   const [videos, search] = useVideos("sleep token");
-  console.log("videos", videos);
-  console.log("search", search);
 
   const videoSrc = `https://www.youtube.com/embed/${videos[0]?.id.videoId}`;
 
