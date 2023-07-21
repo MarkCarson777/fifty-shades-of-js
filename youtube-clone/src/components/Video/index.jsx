@@ -1,6 +1,8 @@
 import "./index.css";
 
-export function Video({ video }) {
+export function Video(props) {
+  const { video } = props;
+
   function timeElapsedString(date) {
     const now = new Date();
     const timeDifferenceInmillis = now - date;
