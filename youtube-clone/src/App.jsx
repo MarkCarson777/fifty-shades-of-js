@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import { useVideos } from "./hooks/useVideos";
 
+import { VideoList } from "./components/VideoList";
+
 import "./App.css";
 
 export function App() {
@@ -14,21 +16,27 @@ export function App() {
 
   return (
     <>
-      <form
-        onSubmit={(event) => {
-          event.preventDefault();
-          search(term);
-        }}
-      >
-        <input
-          placeholder="Search"
-          type="text"
-          value={term}
-          onChange={(event) => setTerm(event.target.value)}
-        />
-      </form>
-      <iframe title="video player" src={videoSrc} />
-      <span>{videos[0]?.snippet.title}</span>
+      <div>
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            search(term);
+          }}
+        >
+          <input
+            placeholder="Search"
+            type="text"
+            value={term}
+            onChange={(event) => setTerm(event.target.value)}
+          />
+          <button>Search</button>
+        </form>
+        <iframe title="video player" src={videoSrc} />
+        <span>{videos[0]?.snippet.title}</span>
+      </div>
+      <div>
+        <VideoList videos={videos} />
+      </div>
     </>
   );
 }
