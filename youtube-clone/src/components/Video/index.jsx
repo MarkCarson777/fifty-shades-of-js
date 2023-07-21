@@ -72,13 +72,13 @@ export function Video(props) {
         src={video.snippet.thumbnails.default.url}
         alt={video.snippet.title}
       />
-      <Icon icon="VerticalEllipsis" />
       <div className="video-details">
         <p className="video-title">{video.snippet.title}</p>
         <p className="video-channel">{video.snippet.channelTitle}</p>
         <p className="video-published">{timeElapsed}</p>
         {isNew && <VideoBadge label="New" />}
       </div>
+      <Icon icon="VerticalEllipsis" className="video-icon" />
     </div>
   );
 }
