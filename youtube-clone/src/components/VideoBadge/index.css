@@ -1,0 +1,9 @@
+.video-badge {
+  padding: 0.2rem 0.3rem;
+  width: fit-content;
+  border-radius: 0.2rem;
+  background-color: rgba(39, 39, 39, 1);
+  color: rgba(170, 170, 170, 1);
+  font-size: 0.75rem;
+  font-weight: 700;
+}

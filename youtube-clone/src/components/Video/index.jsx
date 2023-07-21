@@ -1,3 +1,5 @@
+import { VideoBadge } from "../VideoBadge";
+
 import "./index.css";
 
 export function Video(props) {
@@ -55,6 +57,7 @@ export function Video(props) {
         <p className="video-published">
           {timeElapsedString(new Date(video.snippet.publishedAt))}
         </p>
+        <VideoBadge label="New" />
       </div>
     </div>
   );
