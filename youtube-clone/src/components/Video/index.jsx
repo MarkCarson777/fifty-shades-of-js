@@ -2,23 +2,42 @@ import "./index.css";
 
 export function Video({ video }) {
   function timeElapsedString(date) {
-    console.log("date", date);
     const now = new Date();
-    const timeDifferenceInMillis = now - date;
+    const timeDifferenceInmillis = now - date;
 
-    const millisInHour = 60 * 60 * 1000;
-    const hoursElapsed = Math.floor(timeDifferenceInMillis / millisInHour);
-    console.log("hours", hoursElapsed);
-    if (hoursElapsed === 1) {
-      return "1 hour ago";
-    } else if (hoursElapsed > 1 && hoursElapsed <= 24) {
-      return hoursElapsed + " hours ago";
-    } else if (hoursElapsed > 24 && hoursElapsed <= 48) {
-      return "1 day ago";
-    } else {
-      const daysElapsed = Math.floor(hoursElapsed / 24);
-      return daysElapsed + " days ago";
+    const millisInSecond = 1000;
+    const millisInMinute = 60 * millisInSecond;
+    const millisInHour = 60 * millisInMinute;
+    const millisInDay = 24 * millisInHour;
+    const millisInMonth = 30 * millisInDay;
+    const millisInYear = 12 * millisInMonth;
+
+    let elapsed, unit;
+
+    switch (true) {
+      case timeDifferenceInmillis >= millisInYear:
+        elapsed = Math.floor(timeDifferenceInmillis / millisInYear);
+        unit = elapsed === 1 ? "year" : "years";
+        break;
+      case timeDifferenceInmillis >= millisInMonth:
+        elapsed = Math.floor(timeDifferenceInmillis / millisInMonth);
+        unit = elapsed === 1 ? "month" : "months";
+        break;
+      case timeDifferenceInmillis >= millisInDay:
+        elapsed = Math.floor(timeDifferenceInmillis / millisInDay);
+        unit = elapsed === 1 ? "day" : "days";
+        break;
+      case timeDifferenceInmillis >= millisInHour:
+        elapsed = Math.floor(timeDifferenceInmillis / millisInHour);
+        unit = elapsed === 1 ? "hour" : "hours";
+        break;
+      default:
+        elapsed = Math.floor(timeDifferenceInmillis / millisInMinute);
+        unit = elapsed === 1 ? "minute" : "minutes";
+        break;
     }
+
+    return `${elapsed} ${unit} ago`;
   }
 
   return (
