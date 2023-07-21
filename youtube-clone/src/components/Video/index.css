@@ -17,7 +17,8 @@
 .video-title {
   margin-top: 0;
   margin-bottom: 0.4rem;
-  font-family: "Roboto", sans-serif;
+  color: rgba(241, 241, 241, 1);
+  font-family: "Helvetica";
   font-size: 0.875rem;
   font-weight: 700;
 }
@@ -25,12 +26,14 @@
 .video-channel {
   margin-top: 0;
   margin-bottom: 0.2rem;
-  font-family: "Roboto", sans-serif;
+  color: rgba(170, 170, 170, 1);
+  font-family: "Helvetica";
   font-size: 0.75rem;
 }
 
 .video-published {
   margin-top: 0;
-  font-family: "Roboto", sans-serif;
+  color: rgba(170, 170, 170, 1);
+  font-family: "Helvetica";
   font-size: 0.75rem;
 }

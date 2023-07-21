@@ -11,7 +11,9 @@ export function Video({ video }) {
       <div className="video-details">
         <p className="video-title">{video.snippet.title}</p>
         <p className="video-channel">{video.snippet.channelTitle}</p>
-        <p className="video-published">{video.snippet.publishedAt}</p>
+        <p className="video-published">
+          {new Date(video.snippet.publishedAt).toLocaleString()}
+        </p>
       </div>
     </div>
   );
