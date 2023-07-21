@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
+import { Icon } from "../Icon";
 import { VideoBadge } from "../VideoBadge";
 
 import "./index.css";
@@ -71,6 +72,7 @@ export function Video(props) {
         src={video.snippet.thumbnails.default.url}
         alt={video.snippet.title}
       />
+      <Icon icon="VerticalEllipsis" />
       <div className="video-details">
         <p className="video-title">{video.snippet.title}</p>
         <p className="video-channel">{video.snippet.channelTitle}</p>
