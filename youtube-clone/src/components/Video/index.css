@@ -1,0 +1,36 @@
+.video-container {
+  display: flex;
+  margin-bottom: 0.6rem;
+}
+
+.video-img {
+  height: 94px;
+  width: 168px;
+  margin-right: 0.6rem;
+  border-radius: 0.6rem;
+}
+
+.video-details {
+  margin-top: 0.2rem;
+}
+
+.video-title {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.video-channel {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75rem;
+}
+
+.video-published {
+  margin-top: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75rem;
+}
