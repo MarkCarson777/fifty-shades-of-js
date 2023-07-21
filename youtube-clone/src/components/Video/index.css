@@ -11,6 +11,7 @@
 }
 
 .video-details {
+  flex: 1;
   margin-top: 0.2rem;
 }
 
