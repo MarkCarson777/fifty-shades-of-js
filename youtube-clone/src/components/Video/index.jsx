@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 import { VideoBadge } from "../VideoBadge";
 
@@ -79,3 +80,18 @@ export function Video(props) {
     </div>
   );
 }
+
+Video.propTypes = {
+  video: PropTypes.shape({
+    snippet: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      channelTitle: PropTypes.string.isRequired,
+      publishedAt: PropTypes.string.isRequired,
+      thumbnails: PropTypes.shape({
+        default: PropTypes.shape({
+          url: PropTypes.string.isRequired,
+        }),
+      }),
+    }),
+  }),
+};
