@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { Video } from "../Video";
 
 import "./index.css";
@@ -11,3 +13,7 @@ export function VideoList({ videos }) {
     </div>
   );
 }
+
+VideoList.propTypes = {
+  videos: PropTypes.array.isRequired,
+};
