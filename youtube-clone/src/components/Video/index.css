@@ -1,6 +1,7 @@
 .video-container {
   display: flex;
   margin-bottom: 0.6rem;
+  font-family: Helvetica;
 }
 
 .video-img {
@@ -8,11 +9,13 @@
   width: 168px;
   margin-right: 0.6rem;
   border-radius: 0.6rem;
+  cursor: pointer;
 }
 
 .video-details {
   flex: 1;
   margin-top: 0.2rem;
+  cursor: pointer;
 }
 
 .video-title {
@@ -20,22 +23,17 @@
   margin-bottom: 0.4rem;
   line-height: 1.2rem;
   color: rgba(241, 241, 241, 1);
-  font-family: "Helvetica";
   font-size: 0.875rem;
   font-weight: 700;
 }
 
-.video-channel {
-  margin-top: 0;
-  margin-bottom: 0.2rem;
-  color: rgba(170, 170, 170, 1);
-  font-family: "Helvetica";
-  font-size: 0.75rem;
-}
-
+.video-channel,
 .video-published {
   margin-top: 0;
   color: rgba(170, 170, 170, 1);
-  font-family: "Helvetica";
   font-size: 0.75rem;
+}
+
+.video-channel {
+  margin-bottom: 0.2rem;
 }
