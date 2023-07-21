@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { ReactComponent as VerticalEllipsis } from "../../icons/ellipsis-vertical.svg";
 
 export const icons = {
@@ -14,3 +16,8 @@ export function Icon(props) {
     </span>
   );
 }
+
+Icon.PropTypes = {
+  icon: PropTypes.string.isRequired,
+  className: PropTypes.string,
+};
