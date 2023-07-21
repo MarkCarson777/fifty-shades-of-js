@@ -1,9 +1,13 @@
+import { useState, useEffect } from "react";
+
 import { VideoBadge } from "../VideoBadge";
 
 import "./index.css";
 
 export function Video(props) {
   const { video } = props;
+  const [timeElapsed, setTimeElapsed] = useState(null);
+  const [isNew, setIsNew] = useState(false);
 
   function timeElapsedString(date) {
     const now = new Date();
@@ -16,33 +20,48 @@ export function Video(props) {
     const millisInMonth = 30 * millisInDay;
     const millisInYear = 12 * millisInMonth;
 
-    let elapsed, unit;
+    let elapsed, unit, isNew;
 
     switch (true) {
       case timeDifferenceInmillis >= millisInYear:
         elapsed = Math.floor(timeDifferenceInmillis / millisInYear);
         unit = elapsed === 1 ? "year" : "years";
+        isNew = false;
         break;
       case timeDifferenceInmillis >= millisInMonth:
         elapsed = Math.floor(timeDifferenceInmillis / millisInMonth);
         unit = elapsed === 1 ? "month" : "months";
+        isNew = false;
         break;
       case timeDifferenceInmillis >= millisInDay:
         elapsed = Math.floor(timeDifferenceInmillis / millisInDay);
         unit = elapsed === 1 ? "day" : "days";
+        isNew = false;
         break;
       case timeDifferenceInmillis >= millisInHour:
         elapsed = Math.floor(timeDifferenceInmillis / millisInHour);
         unit = elapsed === 1 ? "hour" : "hours";
+        isNew = true;
         break;
       default:
         elapsed = Math.floor(timeDifferenceInmillis / millisInMinute);
         unit = elapsed === 1 ? "minute" : "minutes";
+        isNew = true;
         break;
     }
 
-    return `${elapsed} ${unit} ago`;
+    return { elapsed, unit, isNew };
   }
+
+  useEffect(() => {
+    const data = timeElapsedString(new Date(video.snippet.publishedAt));
+
+    setTimeElapsed(`${data.elapsed} ${data.unit} ago`);
+
+    if (data.isNew) {
+      setIsNew(true);
+    }
+  }, [video.snippet.publishedAt]);
 
   return (
     <div className="video-container">
@@ -54,10 +73,8 @@ export function Video(props) {
       <div className="video-details">
         <p className="video-title">{video.snippet.title}</p>
         <p className="video-channel">{video.snippet.channelTitle}</p>
-        <p className="video-published">
-          {timeElapsedString(new Date(video.snippet.publishedAt))}
-        </p>
-        <VideoBadge label="New" />
+        <p className="video-published">{timeElapsed}</p>
+        {isNew && <VideoBadge label="New" />}
       </div>
     </div>
   );
