@@ -1,8 +1,12 @@
 import PropTypes from "prop-types";
 
+import { ReactComponent as Clock } from "../../icons/clock.svg";
+import { ReactComponent as RectangleList } from "../../icons/rectangle-list.svg";
 import { ReactComponent as VerticalEllipsis } from "../../icons/ellipsis-vertical.svg";
 
 export const icons = {
+  Clock,
+  RectangleList,
   VerticalEllipsis,
 };
 
