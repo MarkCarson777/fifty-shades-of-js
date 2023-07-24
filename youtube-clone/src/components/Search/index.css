@@ -1,0 +1,12 @@
+.search-container {
+  display: flex;
+  width: 33%;
+}
+
+.search-input {
+  border-radius: 0;
+}
+
+.search-btn {
+  border-radius: 0;
+}
