@@ -11,7 +11,7 @@ export function App() {
   const videoSrc = `https://www.youtube.com/embed/${videos[0]?.id.videoId}`;
 
   return (
-    <>
+    <div className="page-container">
       <Search search={search} />
       <div className="flex">
         <div>
@@ -20,6 +20,6 @@ export function App() {
         </div>
         <VideoList videos={videos} />
       </div>
-    </>
+    </div>
   );
 }
