@@ -6,6 +6,7 @@
 }
 
 .video-img {
+  position: relative;
   height: 94px;
   width: 168px;
   margin-right: 0.6rem;
@@ -44,6 +45,23 @@
 
 .video-published {
   margin-bottom: 0.2rem;
+}
+
+.video-img-icon-container {
+  position: absolute;
+  top: 0.2rem;
+  left: 138px;
+  width: fit-content;
+}
+
+.video-img-icon {
+  display: flex;
+  margin-bottom: 0.25rem;
+  height: 1.2rem;
+  width: 1.2rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  background-color: rgba(15, 15, 15, 1);
 }
 
 .video-icon {

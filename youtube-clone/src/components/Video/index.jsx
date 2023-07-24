@@ -91,7 +91,15 @@ export function Video(props) {
         <p className="video-published">{timeElapsed}</p>
         {isNew && <VideoBadge label="New" />}
       </div>
-      {isHovering && <Icon icon="VerticalEllipsis" className="video-icon" />}
+      {isHovering && (
+        <>
+          <Icon icon="VerticalEllipsis" className="video-icon" />
+          <div className="video-img-icon-container">
+            <Icon icon="Clock" className="video-img-icon" />
+            <Icon icon="RectangleList" className="video-img-icon" />
+          </div>
+        </>
+      )}
     </div>
   );
 }
