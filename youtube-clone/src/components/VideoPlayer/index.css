@@ -1,0 +1,10 @@
+.video-player-container {
+  width: 100%;
+  max-width: 66%;
+}
+
+.video-player {
+  height: 66vh;
+  width: 100%;
+  border: none;
+}
