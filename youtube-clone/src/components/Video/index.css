@@ -56,9 +56,9 @@
 
 .video-img-icon {
   display: flex;
-  margin-bottom: 0.25rem;
   height: 1.2rem;
   width: 1.2rem;
+  margin-bottom: 0.25rem;
   padding: 0.25rem;
   border-radius: 0.25rem;
   background-color: rgba(15, 15, 15, 1);
