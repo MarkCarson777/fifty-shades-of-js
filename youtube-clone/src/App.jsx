@@ -12,12 +12,12 @@ export function App() {
 
   return (
     <>
-      <div>
-        <Search search={search} />
-        <iframe title="video player" src={videoSrc} />
-        <span>{videos[0]?.snippet.title}</span>
-      </div>
-      <div>
+      <Search search={search} />
+      <div className="flex">
+        <div>
+          <iframe title="video player" src={videoSrc} />
+          <p>{videos[0]?.snippet.title}</p>
+        </div>
         <VideoList videos={videos} />
       </div>
     </>
