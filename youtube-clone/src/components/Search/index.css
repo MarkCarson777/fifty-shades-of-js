@@ -1,14 +1,19 @@
 .search-container {
   display: flex;
-  justify-content: center;
   width: 33%;
 }
 
 .search-input {
+  height: 38px;
   flex: 1;
-  border-radius: 0;
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+  border: none;
 }
 
 .search-btn {
-  border-radius: 0;
+  height: 40px;
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border: none;
 }

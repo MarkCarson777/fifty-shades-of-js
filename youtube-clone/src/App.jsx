@@ -1,6 +1,6 @@
 import { useVideos } from "./hooks/useVideos";
 
-import { Search } from "./components/Search";
+import { Header } from "./components/Header";
 import { VideoList } from "./components/VideoList";
 import { VideoPlayer } from "./components/VideoPlayer";
 
@@ -11,7 +11,7 @@ export function App() {
 
   return (
     <div className="page-container">
-      <Search search={search} />
+      <Header search={search} />
       <div className="flex">
         <VideoPlayer videos={videos} />
         <VideoList videos={videos} />

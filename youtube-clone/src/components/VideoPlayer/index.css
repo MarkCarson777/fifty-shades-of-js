@@ -1,6 +1,7 @@
 .video-player-container {
   width: 100%;
   max-width: 66%;
+  margin-right: 1.5rem;
 }
 
 .video-player {
@@ -8,3 +9,12 @@
   width: 100%;
   border: none;
 }
+
+.video-player-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  color: white;
+}
+
+/* .video-player-details {
+} */
