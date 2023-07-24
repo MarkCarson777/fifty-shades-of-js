@@ -6,8 +6,7 @@ import { VideoBadge } from "../VideoBadge";
 
 import "./index.css";
 
-export function Video(props) {
-  const { video } = props;
+export function Video({ video }) {
   const [timeElapsed, setTimeElapsed] = useState(null);
   const [isHovering, setIsHovering] = useState(false);
   const [isNew, setIsNew] = useState(false);
