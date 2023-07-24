@@ -9,6 +9,7 @@ import "./index.css";
 export function Video(props) {
   const { video } = props;
   const [timeElapsed, setTimeElapsed] = useState(null);
+  const [isHovering, setIsHovering] = useState(false);
   const [isNew, setIsNew] = useState(false);
 
   function timeElapsedString(date) {
@@ -65,8 +66,20 @@ export function Video(props) {
     }
   }, [video.snippet.publishedAt]);
 
+  function onMouseOver() {
+    setIsHovering(true);
+  }
+
+  function onMouseOut() {
+    setIsHovering(false);
+  }
+
   return (
-    <div className="video-container">
+    <div
+      className="video-container"
+      onMouseOver={onMouseOver}
+      onMouseOut={onMouseOut}
+    >
       <img
         className="video-img"
         src={video.snippet.thumbnails.default.url}
@@ -78,7 +91,7 @@ export function Video(props) {
         <p className="video-published">{timeElapsed}</p>
         {isNew && <VideoBadge label="New" />}
       </div>
-      <Icon icon="VerticalEllipsis" className="video-icon" />
+      {isHovering && <Icon icon="VerticalEllipsis" className="video-icon" />}
     </div>
   );
 }
