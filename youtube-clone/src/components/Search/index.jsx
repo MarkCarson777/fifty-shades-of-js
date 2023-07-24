@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import PropTypes from "prop-types";
+
 import "./index.css";
 
 export function Search({ search }) {
@@ -24,3 +26,7 @@ export function Search({ search }) {
     </form>
   );
 }
+
+Search.propTypes = {
+  search: PropTypes.func.isRequired,
+};
