@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { VideoToolbar } from "../VideoToolbar";
 
 import "./index.css";
@@ -20,3 +22,7 @@ export function VideoPlayer({ videos }) {
     </div>
   );
 }
+
+VideoPlayer.propTypes = {
+  videos: PropTypes.array.isRequired,
+};
