@@ -1,3 +1,5 @@
+import { VideoToolbar } from "../VideoToolbar";
+
 import "./index.css";
 
 export function VideoPlayer({ videos }) {
@@ -8,8 +10,9 @@ export function VideoPlayer({ videos }) {
     <div className="video-player-container">
       <iframe className="video-player" title="video player" src={videoSrc} />
       <p className="video-player-title">{videos[0]?.snippet.title}</p>
+      <VideoToolbar />
       <div className="video-player-details">
-        <p>{videos[0].snippet.publishedAt}</p>
+        <p>{videos[0]?.snippet.publishedAt}</p>
         <p className="video-player-description">
           {videos[0]?.snippet.description}
         </p>
