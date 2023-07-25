@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { Search } from "../Search";
 
 import "./index.css";
@@ -9,3 +11,7 @@ export function Header({ search }) {
     </div>
   );
 }
+
+Header.propTypes = {
+  search: PropTypes.func.isRequired,
+};
