@@ -11,6 +11,7 @@
 }
 
 .video-player-title {
+  margin-bottom: 0.9rem;
   font-family: "Roboto", sans-serif;
   font-size: 1.25rem;
   color: white;

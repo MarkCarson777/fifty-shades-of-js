@@ -1,5 +1,7 @@
 .video-toolbar-container {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
 
 .video-toolbar-container span {
@@ -13,7 +15,8 @@
 }
 
 .video-toolbar-subscribe {
-  padding: 0.625rem 0.875rem;
+  height: 36px;
+  padding: 0 0.875rem;
   border-radius: 9999px;
   background-color: rgba(241, 241, 241, 1);
   font-size: 0.875rem;
@@ -55,6 +58,12 @@
 .video-toolbar-download span,
 .video-toolbar-share span {
   margin-right: 8px;
+}
+
+.video-toolbar-dislike,
+.video-toolbar-download,
+.video-toolbar-share {
+  margin-right: 0.5rem;
 }
 
 .video-toolbar-like {
