@@ -1,6 +1,11 @@
+.video-toolbar-container {
+  display: flex;
+}
+
 .video-toolbar-container span {
-  display: block;
-  width: 12px;
+  display: flex;
+  justify-content: center;
+  width: 20px;
 }
 
 .video-toolbar-container > button {
@@ -25,7 +30,7 @@
 .video-toolbar-dislike,
 .video-toolbar-download,
 .video-toolbar-share {
-  padding: 0.625rem 0.875rem;
+  padding: 0.4rem 0.875rem;
   background-color: rgba(41, 40, 40, 1);
   font-size: 0.875rem;
   font-weight: 700;
@@ -35,9 +40,21 @@
 .video-toolbar-like:hover,
 .video-toolbar-dislike:hover,
 .video-toolbar-download:hover,
-.video-toolbar-share:hover {
+.video-toolbar-share:hover,
+.video-toolbar-menu:hover {
   cursor: pointer;
   background-color: rgba(63, 63, 63, 1);
+}
+
+.video-toolbar-download,
+.video-toolbar-share {
+  display: flex;
+  align-items: center;
+}
+
+.video-toolbar-download span,
+.video-toolbar-share span {
+  margin-right: 8px;
 }
 
 .video-toolbar-like {
@@ -56,5 +73,15 @@
 }
 
 .video-toolbar-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
   background-color: rgba(41, 40, 40, 1);
+}
+
+.video-toolbar-menu span {
+  height: 24px;
 }
