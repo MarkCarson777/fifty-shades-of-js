@@ -1,3 +1,41 @@
 .video-toolbar-container {
-  color: white;
+  height: 36px;
+}
+
+.video-toolbar-container > button {
+  border: none;
+}
+
+.video-toolbar-subscribe {
+  padding: 0.625rem 0.875rem;
+  border-radius: 9999px;
+  background-color: rgba(241, 241, 241, 1);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: rgba(15, 15, 15, 1);
+}
+
+.video-toolbar-subscribe:hover {
+  cursor: pointer;
+  background-color: rgba(241, 241, 241, 0.9);
+}
+
+.video-toolbar-like {
+  background-color: rgba(41, 40, 40, 1);
+}
+
+.video-toolbar-dislike {
+  background-color: rgba(41, 40, 40, 1);
+}
+
+.video-toolbar-share {
+  background-color: rgba(41, 40, 40, 1);
+}
+
+.video-toolbar-download {
+  background-color: rgba(41, 40, 40, 1);
+}
+
+.video-toolbar-menu {
+  background-color: rgba(41, 40, 40, 1);
 }
