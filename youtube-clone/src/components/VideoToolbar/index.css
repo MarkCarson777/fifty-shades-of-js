@@ -1,3 +1,8 @@
+.video-toolbar-container span {
+  display: block;
+  width: 12px;
+}
+
 .video-toolbar-container > button {
   border: none;
 }
