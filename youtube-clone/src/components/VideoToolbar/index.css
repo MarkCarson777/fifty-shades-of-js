@@ -35,10 +35,14 @@
   background-color: rgba(63, 63, 63, 1);
 }
 
-.video-toolbar-like,
-.video-toolbar-dislike {
+.video-toolbar-like {
   border-top-left-radius: 9999px;
   border-bottom-left-radius: 9999px;
+}
+
+.video-toolbar-dislike {
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
 }
 
 .video-toolbar-download,
