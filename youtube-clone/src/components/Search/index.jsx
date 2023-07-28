@@ -1,6 +1,7 @@
 import { useState } from "react";
-
 import PropTypes from "prop-types";
+
+import { Icon } from "../Icon";
 
 import "./index.css";
 
@@ -23,7 +24,9 @@ export function Search({ search }) {
           value={term}
           onChange={(event) => setTerm(event.target.value)}
         />
-        <button className="search-btn">Search</button>
+        <button className="search-btn">
+          <Icon icon="Search" />
+        </button>
       </form>
     </>
   );
