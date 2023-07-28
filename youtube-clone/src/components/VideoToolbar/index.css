@@ -33,7 +33,12 @@
 }
 
 .video-toolbar-download {
+  padding: 0.625rem 0.875rem;
+  border-radius: 9999px;
   background-color: rgba(41, 40, 40, 1);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: rgba(241, 241, 241, 1);
 }
 
 .video-toolbar-menu {
