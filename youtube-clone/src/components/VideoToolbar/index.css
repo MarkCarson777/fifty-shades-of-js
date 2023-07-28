@@ -1,7 +1,3 @@
-.video-toolbar-container {
-  height: 36px;
-}
-
 .video-toolbar-container > button {
   border: none;
 }
@@ -20,32 +16,34 @@
   background-color: rgba(241, 241, 241, 0.9);
 }
 
-.video-toolbar-like {
-  background-color: rgba(41, 40, 40, 1);
-}
-
-.video-toolbar-dislike {
-  background-color: rgba(41, 40, 40, 1);
-}
-
-.video-toolbar-share {
-  background-color: rgba(41, 40, 40, 1);
-}
-
+.video-toolbar-like,
+.video-toolbar-dislike,
 .video-toolbar-download,
 .video-toolbar-share {
   padding: 0.625rem 0.875rem;
-  border-radius: 9999px;
   background-color: rgba(41, 40, 40, 1);
   font-size: 0.875rem;
   font-weight: 700;
   color: rgba(241, 241, 241, 1);
 }
 
+.video-toolbar-like:hover,
+.video-toolbar-dislike:hover,
 .video-toolbar-download:hover,
 .video-toolbar-share:hover {
   cursor: pointer;
   background-color: rgba(63, 63, 63, 1);
+}
+
+.video-toolbar-like,
+.video-toolbar-dislike {
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+}
+
+.video-toolbar-download,
+.video-toolbar-share {
+  border-radius: 9999px;
 }
 
 .video-toolbar-menu {
