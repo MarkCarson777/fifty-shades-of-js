@@ -7,6 +7,17 @@
   width: 90%;
 }
 
+.header-logo {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  overflow: hidden;
+}
+
+.header-logo img {
+  height: 60px;
+}
+
 .header-container button {
   display: flex;
   justify-content: center;
@@ -14,7 +25,6 @@
   padding: 0;
   height: 40px;
   border: none;
-  background-color: transparent;
 }
 
 .header-container span {
@@ -23,15 +33,34 @@
   width: 20px;
 }
 
-.header-container div {
-  display: flex;
-}
-
 .header-button-group {
   display: flex;
   align-items: center;
 }
 
 .header-button-group button {
+  background-color: transparent;
   margin-right: 1.5rem;
+}
+
+.test {
+  display: flex;
+  width: 40%;
+}
+
+.test > button {
+  background-color: transparent;
+}
+
+.test > button > span {
+  width: 16px;
+  background-color: transparent;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo-container > button {
+  background-color: transparent;
 }

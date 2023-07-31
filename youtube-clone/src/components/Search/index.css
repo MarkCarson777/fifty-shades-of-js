@@ -1,6 +1,7 @@
 .search-container {
   display: flex;
-  width: 33%;
+  flex: 1;
+  margin-right: 1rem;
   border: 1px solid rgba(48, 48, 48, 1);
   border-radius: 9999px;
 }

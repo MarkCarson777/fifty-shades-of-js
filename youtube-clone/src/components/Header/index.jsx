@@ -4,19 +4,28 @@ import { Avatar } from "../Avatar";
 import { Icon } from "../Icon";
 import { Search } from "../Search";
 
+import youtube from "../../images/youtube.png";
+
 import "./index.css";
 
 export function Header({ search }) {
   return (
     <div className="header-container">
-      <button>
-        <Icon icon="Menu" />
-      </button>
+      <div className="logo-container">
+        <button>
+          <Icon icon="Menu" />
+        </button>
+        <div className="header-logo">
+          <img src={youtube} alt="youtube" />
+        </div>
+      </div>
 
-      <Search search={search} />
-      <button className="header-microphone">
-        <Icon icon="Microphone" />
-      </button>
+      <div className="test">
+        <Search search={search} />
+        <button>
+          <Icon icon="Microphone" />
+        </button>
+      </div>
 
       <div className="header-button-group">
         <button>
