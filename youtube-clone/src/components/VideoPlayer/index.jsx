@@ -7,27 +7,25 @@ import { VideoToolbar } from "../VideoToolbar";
 
 import "./index.css";
 
-export function VideoPlayer({ videos }) {
+export function VideoPlayer({ video }) {
   const [timeElapsed, setTimeElapsed] = useState(null);
-  const videoSrc = `https://www.youtube.com/embed/${videos[0]?.id.videoId}`;
+  const videoSrc = `https://www.youtube.com/embed/${video?.id.videoId}`;
 
   useEffect(() => {
-    const data = timeElapsedString(new Date(videos[0]?.snippet.publishedAt));
+    const data = timeElapsedString(new Date(video?.snippet.publishedAt));
     setTimeElapsed(`${data.elapsed} ${data.unit} ago`);
-  }, [videos]);
+  }, [video]);
 
-  console.log("videos", videos);
+  console.log("video", video);
 
   return (
     <div className="video-player-container">
       <iframe className="video-player" title="video player" src={videoSrc} />
-      <p className="video-player-title">{videos[0]?.snippet.title}</p>
+      <p className="video-player-title">{video?.snippet.title}</p>
       <VideoToolbar />
       <div className="video-player-details">
         <p>{timeElapsed}</p>
-        <p className="video-player-description">
-          {videos[0]?.snippet.description}
-        </p>
+        <p className="video-player-description">{video?.snippet.description}</p>
       </div>
     </div>
   );

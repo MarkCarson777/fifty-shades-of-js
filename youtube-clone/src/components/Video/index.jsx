@@ -8,7 +8,7 @@ import { VideoBadge } from "../VideoBadge";
 
 import "./index.css";
 
-export function Video({ video }) {
+export function Video({ video, onVideoSelect }) {
   const [timeElapsed, setTimeElapsed] = useState(null);
   const [isHovering, setIsHovering] = useState(false);
   const [isNew, setIsNew] = useState(false);
@@ -34,6 +34,7 @@ export function Video({ video }) {
   return (
     <div
       className="video-container"
+      onClick={() => onVideoSelect(video)}
       onMouseOver={onMouseOver}
       onMouseOut={onMouseOut}
     >
