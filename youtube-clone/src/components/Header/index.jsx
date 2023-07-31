@@ -18,7 +18,7 @@ export function Header({ search }) {
         <Icon icon="Microphone" />
       </button>
 
-      <div>
+      <div className="header-button-group">
         <button>
           <Icon icon="Video" />
         </button>

@@ -1,5 +1,9 @@
 import "./index.css";
 
 export function Avatar() {
-  return <div className="avatar">Avatar</div>;
+  return (
+    <div className="avatar">
+      <span>M</span>
+    </div>
+  );
 }
