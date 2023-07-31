@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 
+import { Avatar } from "../Avatar";
 import { Icon } from "../Icon";
 import { Search } from "../Search";
 
@@ -24,6 +25,7 @@ export function Header({ search }) {
         <button>
           <Icon icon="Bell" />
         </button>
+        <Avatar />
       </div>
     </div>
   );
