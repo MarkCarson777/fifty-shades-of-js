@@ -39,8 +39,17 @@
 }
 
 .header-button-group button {
+  height: 40px;
+  width: 40px;
   background-color: transparent;
   margin-right: 1.5rem;
+}
+
+.header-button-group button:hover {
+  margin-right: 1.5rem;
+  border-radius: 50%;
+  background-color: rgba(63, 63, 63, 1);
+  cursor: pointer;
 }
 
 .test {
@@ -49,18 +58,28 @@
 }
 
 .test > button {
-  background-color: transparent;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: rgba(34, 34, 34, 1);
+}
+
+.test > button:hover {
+  cursor: pointer;
+  background-color: rgba(63, 63, 63, 1);
 }
 
 .test > button > span {
-  width: 16px;
+  width: 14px;
   background-color: transparent;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .logo-container > button {
   background-color: transparent;
+  cursor: pointer;
 }
