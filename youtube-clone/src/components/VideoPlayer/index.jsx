@@ -16,8 +16,6 @@ export function VideoPlayer({ video }) {
     setTimeElapsed(`${data.elapsed} ${data.unit} ago`);
   }, [video]);
 
-  console.log("video", video);
-
   return (
     <div className="video-player-container">
       <iframe className="video-player" title="video player" src={videoSrc} />

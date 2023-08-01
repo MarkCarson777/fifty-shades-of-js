@@ -9,6 +9,7 @@
   position: relative;
   height: 94px;
   width: 168px;
+  min-width: 168px;
   margin-right: 0.6rem;
   border-radius: 0.6rem;
   object-fit: cover;
@@ -25,11 +26,18 @@
 .video-title {
   max-width: 90%;
   margin-top: 0;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
   line-height: 1.2rem;
   color: rgba(241, 241, 241, 1);
   font-size: 0.875rem;
   font-weight: 700;
+  height: 3em;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .video-channel,
@@ -41,6 +49,11 @@
 
 .video-channel {
   margin-bottom: 0.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .video-published {
