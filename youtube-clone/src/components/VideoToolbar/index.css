@@ -46,7 +46,7 @@
 .video-toolbar-share:hover,
 .video-toolbar-menu:hover {
   cursor: pointer;
-  background-color: rgba(63, 63, 63, 1);
+  background-color: var(--grey-hover);
 }
 
 .video-toolbar-download,

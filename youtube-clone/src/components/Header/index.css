@@ -30,7 +30,7 @@
 .header__group-one > button:hover,
 .header__group-two > button:hover,
 .header__group-three > button:hover {
-  background-color: rgba(63, 63, 63, 1);
+  background-color: var(--grey-hover);
   cursor: pointer;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .header__group-two > button {
-  background-color: rgba(34, 34, 34, 1);
+  background-color: var(--grey);
 }
 
 .header__group-three > button {

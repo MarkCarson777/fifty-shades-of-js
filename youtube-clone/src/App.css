@@ -2,6 +2,8 @@
   --black: rgba(15, 15, 15, 1);
   --white: rgba(241, 241, 241, 1);
   --white-hover: rgba(241, 241, 241, 0.9);
+  --grey: rgba(34, 34, 34, 1);
+  --grey-hover: rgba(63, 63, 63, 1);
 }
 
 body {
