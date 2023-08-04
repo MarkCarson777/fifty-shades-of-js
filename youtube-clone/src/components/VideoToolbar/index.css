@@ -21,7 +21,7 @@
   background-color: var(--white);
   font-size: 0.875rem;
   font-weight: 700;
-  color: rgba(15, 15, 15, 1);
+  color: var(--black);
 }
 
 .video-toolbar-subscribe:hover {
