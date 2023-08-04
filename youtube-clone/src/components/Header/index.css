@@ -54,6 +54,7 @@
 }
 
 .header__group-two > button {
+  margin-left: 1rem;
   background-color: var(--grey);
 }
 
