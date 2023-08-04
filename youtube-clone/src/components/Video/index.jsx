@@ -33,28 +33,28 @@ export function Video({ video, onVideoSelect }) {
 
   return (
     <div
-      className="video-container"
+      className="video"
       onClick={() => onVideoSelect(video)}
       onMouseOver={onMouseOver}
       onMouseOut={onMouseOut}
     >
       <img
-        className="video-img"
+        className="video__img"
         src={video.snippet.thumbnails.default.url}
         alt={video.snippet.title}
       />
-      <div className="video-details">
-        <p className="video-title">{video.snippet.title}</p>
-        <p className="video-channel">{video.snippet.channelTitle}</p>
-        <p className="video-published">{timeElapsed}</p>
+      <div className="video__details">
+        <p className="video__title">{video.snippet.title}</p>
+        <p className="video__channel">{video.snippet.channelTitle}</p>
+        <p className="video__published">{timeElapsed}</p>
         {isNew && <VideoBadge label="New" />}
       </div>
       {isHovering && (
         <>
-          <Icon icon="VerticalEllipsis" className="video-icon" />
-          <div className="video-img-icon-container">
-            <Icon icon="Clock" className="video-img-icon" />
-            <Icon icon="RectangleList" className="video-img-icon" />
+          <Icon icon="VerticalEllipsis" className="video__menu" />
+          <div className="video__icons">
+            <Icon icon="Clock" className="video__icon" />
+            <Icon icon="RectangleList" className="video__icon" />
           </div>
         </>
       )}
