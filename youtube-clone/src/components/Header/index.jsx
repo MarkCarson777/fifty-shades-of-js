@@ -10,33 +10,33 @@ import "./index.css";
 
 export function Header({ search }) {
   return (
-    <div className="header-container">
-      <div className="logo-container">
+    <header className="header">
+      <div className="header__group-one">
         <button>
-          <Icon icon="Menu" />
+          <Icon className="header__icon" icon="Menu" />
         </button>
-        <div className="header-logo">
+        <div className="header__logo">
           <img src={youtube} alt="youtube" />
         </div>
       </div>
 
-      <div className="test">
+      <div className="header__group-two">
         <Search search={search} />
         <button>
-          <Icon icon="Microphone" />
+          <Icon className="header__icon" icon="Microphone" />
         </button>
       </div>
 
-      <div className="header-button-group">
+      <div className="header__group-three">
         <button>
-          <Icon icon="Video" />
+          <Icon className="header__icon" icon="Video" />
         </button>
         <button>
-          <Icon icon="Bell" />
+          <Icon className="header__icon" icon="Bell" />
         </button>
         <Avatar />
       </div>
-    </div>
+    </header>
   );
 }
 

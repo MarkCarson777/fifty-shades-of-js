@@ -1,85 +1,68 @@
-.header-container {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  width: 90%;
+  padding: 0.5rem 0;
+  width: 100%;
 }
 
-.header-logo {
+.header__group-one,
+.header__group-two,
+.header__group-three {
+  display: flex;
+  align-items: center;
+}
+
+.header__group-one > button,
+.header__group-two > button,
+.header__group-three > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.header__logo {
   display: flex;
   align-items: center;
   height: 50px;
   overflow: hidden;
 }
 
-.header-logo img {
+.header__logo > img {
   height: 60px;
 }
 
-.header-container button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  height: 40px;
-  border: none;
-}
-
-.header-container span {
-  display: flex;
-  justify-content: center;
-  width: 20px;
-}
-
-.header-button-group {
-  display: flex;
-  align-items: center;
-}
-
-.header-button-group button {
-  height: 40px;
-  width: 40px;
-  background-color: transparent;
-  margin-right: 1.5rem;
-}
-
-.header-button-group button:hover {
-  margin-right: 1.5rem;
-  border-radius: 50%;
-  background-color: rgba(63, 63, 63, 1);
+.header__logo:hover {
   cursor: pointer;
 }
 
-.test {
-  display: flex;
+.header__group-two {
   width: 40%;
 }
 
-.test > button {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
+.header__group-two > button {
   background-color: rgba(34, 34, 34, 1);
 }
 
-.test > button:hover {
-  cursor: pointer;
+.header__group-one > button:hover,
+.header__group-two > button:hover,
+.header__group-three > button:hover {
   background-color: rgba(63, 63, 63, 1);
+  cursor: pointer;
 }
 
-.test > button > span {
-  width: 14px;
-  background-color: transparent;
+.header__group-three > button {
+  margin-right: 1.5rem;
 }
 
-.logo-container {
+.header__icon {
   display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-.logo-container > button {
-  background-color: transparent;
-  cursor: pointer;
+  justify-content: center;
+  width: 100%;
 }

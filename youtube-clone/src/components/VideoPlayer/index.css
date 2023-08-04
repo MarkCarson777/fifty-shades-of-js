@@ -28,3 +28,7 @@
 .video-player-details p {
   margin: 0;
 }
+
+.video-player-details p:first-child {
+  margin-bottom: 0.4rem;
+}
