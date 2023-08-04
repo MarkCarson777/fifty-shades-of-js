@@ -13,6 +13,8 @@ import { ReactComponent as Share } from "../../icons/share-from-square.svg";
 import { ReactComponent as VerticalEllipsis } from "../../icons/ellipsis-vertical.svg";
 import { ReactComponent as Video } from "../../icons/video.svg";
 
+import "./index.css";
+
 export const icons = {
   Bell,
   Clock,
@@ -34,7 +36,7 @@ export function Icon(props) {
 
   return (
     <span className={className}>
-      <Component />
+      <Component className="icon" />
     </span>
   );
 }
