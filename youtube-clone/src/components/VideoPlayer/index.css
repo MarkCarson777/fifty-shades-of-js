@@ -13,7 +13,7 @@
   margin-bottom: 0.9rem;
   font-family: "Roboto", sans-serif;
   font-size: 1.25rem;
-  color: white;
+  color: var(--white);
 }
 
 .video-player-details {
@@ -22,7 +22,7 @@
   background-color: rgba(40, 40, 40, 1);
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
-  color: white;
+  color: var(--white);
 }
 
 .video-player-details p {

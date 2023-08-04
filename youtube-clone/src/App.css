@@ -1,3 +1,8 @@
+:root {
+  --white: rgba(241, 241, 241, 1);
+  --white-hover: rgba(241, 241, 241, 0.9);
+}
+
 body {
   margin: 0;
   background-color: rgba(15, 15, 15, 1);

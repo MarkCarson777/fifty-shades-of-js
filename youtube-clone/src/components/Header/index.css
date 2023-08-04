@@ -27,6 +27,13 @@
   background-color: transparent;
 }
 
+.header__group-one > button:hover,
+.header__group-two > button:hover,
+.header__group-three > button:hover {
+  background-color: rgba(63, 63, 63, 1);
+  cursor: pointer;
+}
+
 .header__logo {
   display: flex;
   align-items: center;
@@ -48,13 +55,6 @@
 
 .header__group-two > button {
   background-color: rgba(34, 34, 34, 1);
-}
-
-.header__group-one > button:hover,
-.header__group-two > button:hover,
-.header__group-three > button:hover {
-  background-color: rgba(63, 63, 63, 1);
-  cursor: pointer;
 }
 
 .header__group-three > button {

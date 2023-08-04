@@ -7,10 +7,7 @@
   margin: 0 6px;
   border-radius: 50%;
   background-color: rgba(124, 95, 190, 1);
-  color: white;
+  color: var(--white);
   font-family: Helvetica;
   cursor: pointer;
-}
-.avatar > span {
-  padding-top: 2px;
 }
