@@ -11,6 +11,6 @@
   font-family: Helvetica;
   cursor: pointer;
 }
-.avatar span {
+.avatar > span {
   padding-top: 2px;
 }
